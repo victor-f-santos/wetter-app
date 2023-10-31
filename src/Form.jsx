@@ -1,13 +1,18 @@
-export function Form() {
+export function Form({ onAddActivity }) {
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("hey");
-  }
-  onAddActivity({
-    name: form.elements.name.value
-    isForGoodWeather: form.elements.isForGoodWeather.checked
-  })
 
+    const data = {
+      // id: 1,
+      // uid
+      name: e.target.name.value,
+      isForGoodWeather: e.target.weather.checked,
+    };
+    onAddActivity(data);
+    e.target.name.value = "";
+    e.target.name.focus();
+    e.target.weather.checked = false;
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -16,8 +21,8 @@ export function Form() {
       Add name:
       <input type="text" name="name" />
       <br />
-      <label htmlFor="activity">Good weather activity</label>
-      <input type="checkbox" name="activity"></input>
+      <label htmlFor="weather">Good weather activity</label>
+      <input type="checkbox" name="weather" id="weather"></input>
       <br />
       <button type="submit">Submit</button>
     </form>
