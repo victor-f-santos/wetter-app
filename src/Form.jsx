@@ -1,28 +1,25 @@
 export function Form() {
-  // const form = document.querySelector('[data-js="form"]');
-  // form.addEventListener("submit", (event) => {
-  //   event.preventDefault();
-  //   console.log("Hallo");
-  // });
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("hey");
+  }
+  onAddActivity({
+    name: form.elements.name.value
+    isForGoodWeather: form.elements.isForGoodWeather.checked
+  })
+
+
   return (
-    <form data-js="form">
+    <form onSubmit={handleSubmit}>
       <h1>Wetter App</h1>
       <p>Add new activity</p>
       Add name:
-      <input type="text" />
+      <input type="text" name="name" />
       <br />
       <label htmlFor="activity">Good weather activity</label>
       <input type="checkbox" name="activity"></input>
       <br />
-      <button
-        type="submit"
-        onClick={(event) => {
-          event.preventDefault();
-          console.log("Hallo");
-        }}
-      >
-        Submit
-      </button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
