@@ -5,8 +5,7 @@ import "./List.css";
 export function List({ activities, isGoodWeather, emoji, onDeleteActivity }) {
   return (
     <div className="createList">
-      <h1>{isGoodWeather ? "The weather is fine" : "Bad weather today"}</h1>
-      <p>Here is the list with activities</p>
+      <h1>{isGoodWeather ? "Yeeeeah, let's enjoy it!" : "Not today, b*tch"}</h1>
       <ul>
         {activities
           .filter((activity) => activity.isForGoodWeather === isGoodWeather)
