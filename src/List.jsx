@@ -2,7 +2,7 @@
 
 import "./List.css";
 
-export function List({ activities, isGoodWeather }) {
+export function List({ activities, isGoodWeather, emoji }) {
     return (
         <div className="createList">
             <h1>

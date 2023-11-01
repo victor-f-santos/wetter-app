@@ -24,9 +24,11 @@ function App() {
     }, [activities]);
     const isGoodWeather = weather.isGoodWeather;
     console.log(isGoodWeather);
+    console.log(weather.condition);
 
     return (
         <>
+            {weather.condition} {weather.temperature + "°C"}
             <List activities={activities} isGoodWeather={isGoodWeather} />
             <Form onAddActivity={handleAddActivity} />
         </>
