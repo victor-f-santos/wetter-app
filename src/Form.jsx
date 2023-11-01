@@ -1,10 +1,11 @@
+import { uid } from "uid";
+
 export function Form({ onAddActivity }) {
   function handleSubmit(e) {
     e.preventDefault();
 
     const data = {
-      // id: 1,
-      // uid
+      id: uid(),
       name: e.target.name.value,
       isForGoodWeather: e.target.weather.checked,
     };
