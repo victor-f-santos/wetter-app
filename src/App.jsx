@@ -22,6 +22,10 @@ function App() {
         }
 
         startFetching();
+
+        setInterval(() => {
+            startFetching();
+        }, 5000);
     }, []);
 
     useEffect(() => {
