@@ -1,10 +1,19 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    background-color: rgb(6, 26, 115);
-    margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(64, 224, 208, 0.6);
+  margin: 4px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px lightblue;
+  text-align: left;
+  padding-left: 20px;
+  color: darkblue;
+  font-weight: bold;
 }
